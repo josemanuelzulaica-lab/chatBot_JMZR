@@ -11,7 +11,7 @@ def iniciar_chatbot():
         pregunta = input("\nCliente: ").strip()
 
         # cerrar la sesión del cliente cuando ha terminado
-        if pregunta.lower() == "salir":
+        if pregunta.lower() == ("salir" or "adios" or "bye" or "gracias") :
             print("asistente: Gracias por tu visita")
             break
 

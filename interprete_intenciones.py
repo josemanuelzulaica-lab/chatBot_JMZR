@@ -9,7 +9,7 @@ palabras_comunes = {
     "de", "del", "mi", "mis", "tu", "un",
     "una", "para", "por", "con", "en",
     "me", "puedes", "quiero", "quisiera",
-    "saber", "necesito", "ayuda", "como",
+    "saber", "como",
     "cuando", "si", "se", "a"
 }
 
@@ -44,8 +44,8 @@ def procesar_pregunta(texto):
         if caracter.isalnum() or caracter.isspace()
     )
     
-            #se regresan tokenizadas las dudas de los clientes en palabras
-    return word_tokenize(texto, language="spanish")
+    # La puntuación ya se eliminó. Solo se necesita tokenizar palabras.
+    return word_tokenize(texto, language="spanish", preserve_line=True)
 
 
 # se detectan palabras clave que nos ayudan a detectar la intención
